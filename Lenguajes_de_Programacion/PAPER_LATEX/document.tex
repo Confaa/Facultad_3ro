@@ -1,0 +1,209 @@
+\documentclass[a4paper,10pt]{article}
+
+% Paquetes requeridos
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage[style=apa, backend=biber, natbib=true, language=spanish, url=true]{biblatex}
+\usepackage{tocloft} % Para personalizar el índice
+\usepackage[left=3.5cm,right=2.5cm,top=3.5cm,bottom=3.8cm]{geometry}
+\usepackage{setspace} % Espaciado
+\usepackage{titlesec} % Para personalizar los títulos
+\usepackage{fancyhdr} % Para personalizar encabezados y pies de página
+\usepackage{newtxtext}
+\usepackage[hypertexnames=false, colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue, linkbordercolor={1 1 0}, citebordercolor={1 1 0}, urlbordercolor={1 1 0}, filecolor=blue, pdfborderstyle={/S/U/W 1}]{hyperref}
+\usepackage{ragged2e}
+
+\pagestyle{fancy}
+\fancyhf{} % Limpia encabezados y pies de página
+\renewcommand{\headrulewidth}{4pt} % Elimina la línea del encabezado
+
+\addbibresource{referencias.bib}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+% Configuraciones
+\setlength{\parskip}{1.98pt} % Espacio entre párrafos
+\setstretch{1.15} % Espacio entre líneas
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % Para puntos en el índice
+
+% Estilos para títulos y subtítulos
+\titleformat{\section}{\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{10}{13}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\fontsize{10.5}{13}\bfseries}{\thesubsubsection}{1em}{}
+% Inicio del documento
+\begin{document}
+		\pagestyle{empty}
+		% Carátula
+			\centering
+			\vspace*{1.5cm}
+			{\fontsize{14}{17}\bfseries JAVASCRIPT EN EL METAVERSO: TECNOLOGÍAS Y OPORTUNIDADES FUTURAS\par}
+			{\small Castillo Fabricio,}
+			{\small Confalonieri Juan,}
+			{\small Tenich Javier\par}
+			{\small Universidad Nacional de Entre Ríos, Concordia, Argentina \par}
+			{\normalsize \href {mailto:castillofabricio97@gmail.com}{castillofabricio97@gmail.com, }\href{mailto:juanconfaa@gmail.com}{juanconfaa@gmail.com, }
+			\href{mailto:jtenich@gmail.com}{jtenich@gmail.com}}\par
+			\justifying
+			\textbf{Abstract}\par
+						% Resumen y palabras clave
+			{\normalsize {Si bien el Metaverso se encuentra en una etapa muy temprana, numerosas empresas ya se encuentran volcadas en su desarrollo e implementación en un futuro cercano. Los lenguajes de programación y las tecnologías derivadas juegan un papel fundamental en esto brindando una base sólida y Javascript no es la excepción. La alta disponibilidad de Frameworks y librerías en este lenguaje acelera mucho el desarrollo y será cuestión de tiempo a que el Metaverso despegue. Es una gran oportunidad para nuevos negocios y para una interconexión global. Este trabajo tiene como objetivo proporcionar una introducción al Metaverso, explorando su origen, su relación con los videojuegos y la inteligencia artificial, identificando empresas involucradas, examinando los lenguajes de programación utilizados, evaluando su potencial para la comunidad de programadores y analizando los factores a considerar al elegir un lenguaje de programación. Además, se presta una atención particular a la importancia de JavaScript en este contexto.}}\par
+		{\small \textbf{Palabras clave:} Metaverso, Lenguajes de Programación, Javascript.\par}
+		\section{Introducción al Trabajo Integrador de Contenidos (TIC)}
+		{\normalsize El TIC de la cátedra Lenguajes de Programación (LP), tiene como objetivo general relevar información acerca de temas relacionados directa o indirectamente con el contenido de las unidades temáticas del programa de la cátedra; destacándose especialmente que la presentación y defensa del TIC posibilita además la promoción de la materia. Para el logro del mismo, los alumnos deben arribar a conclusiones en base a la temática seleccionada, presentando y exponiendo su trabajo a fin de desarrollar aptitudes de autonomía y oralidad; en base a las pautas de elaboración formales que les son requeridas.\par 
+		En el TIC correspondiente al año en curso, se trabajó en la profundización de conceptos acerca del mundo virtual o universo paralelo denominado Metaverso (Metaverse). Se procurará establecer sus orígenes conceptuales, presente y futuro, relaciones con juegos, inteligencia artificial, Internet de las Cosas (IoT), realidad virtual, realidad alternativa y realidad aumentada, dispositivos de acceso, procesos inmersivos y empresas involucradas que están a la vanguardia tecnológica. Asimismo, se intentará establecer cómo estos conceptos se relacionan e integran principalmente con otros, tales como: evolución, principios de diseño, paradigmas y criterios de evaluación de Lenguajes de Programación y por qué los lenguajes C\# y C++, Java, JavaScript, Python, Solidity, Rust, Swift, HTML, CSS, SQL, y TypeScript, entre otros, son los considerados más relevantes para el Metaverso.}
+		\subsection{Breve reseña de la temática seleccionada.}
+	{\normalsize El Metaverso, en algún momento considerado un concepto de ciencia ficción, se ha determinado como una realidad tangible y prometedora de la era digital actual. Este término, popularizado en el año 1992 por el escritor Neal Stephenson en su novela "Snow Crash", ha servido como impulsor de la industria tecnológica en los últimos años.\par 
+		El auge de los mundos virtuales y videojuegos en línea durante las décadas 2000-2010 sentó las bases para la idea de que un Metaverso sea posible. Sin embargo, fue en esta última década cuando tecnologías tales como realidad virtual (VR) y realidad aumentada (AR), junto con el desarrollo de plataformas sociales y colaborativas, aceleraron este desarrollo.\par 
+		El concepto del Metaverso se basa en la combinación de "meta" (más allá o después) y "universo". En términos prácticos, refiere a un entorno virtual tridimensional compartido y en línea, donde los usuarios pueden interactuar y socializar; aunque su significado ha evolucionado y expandido significativamente desde entonces. La base del Metaverso es la interacción social y la colaboración entre usuarios, permitiendo romper barreras geográficas y culturales; permitiendo a las personas entre otras cosas, reunirse, trabajar, aprender y divertirse juntas en entornos virtuales compartidos. El Metaverso involucra y relaciona conceptos de interconexión, identidad digital, economías virtuales, socialización, colaboración y en particular de aplicación de tecnología.\par 
+		El desarrollo y mantenimiento del Metaverso implican un amplio uso de lenguajes de programación y tecnologías de desarrollo. Los lenguajes de programación son fundamentales para crear las bases de los mundos virtuales y aplicaciones que formatean este concepto.\par 
+		Por ejemplo, podemos citar Unity (C\#), Unreal Engine (C++), entre otros, para crear escenas, modelos, texturas, animaciones de entornos virtuales tridimensionales. Para Desarrollo Web, HTML, CSS y JavaScript y para Realidad Virtual y Aumentada, C++, frameworks de desarrollo (ARKit y ARCore) que utilizan Swift y Java.
+		En resumen, el Metaverso representa y representará una evolución en la forma en que interactuamos con la tecnología y entre nosotros mismos. Como hemos dicho, sus orígenes se remontan a la ciencia ficción y los videojuegos en línea, pero ha madurado hasta convertirse en una realidad digital que abarca múltiples conceptos clave como la interconexión, la identidad digital, las economías virtuales y la socialización. Para lograr esto, se apoya en una amplia variedad de lenguajes de programación y tecnologías, que permiten la creación y mantenimiento de estos universos virtuales. Con el avance continuo de la tecnología, el Metaverso seguirá expandiéndose y definiendo el futuro de las interacciones humanas en el mundo digital.}
+		\section{Desarrollo del trabajo}
+	{\normalsize Para el abordaje de todos los aspectos relacionados al TIC, desde la cátedra se propuso trabajar en ocho (8) grupos de alumnos y a través de consignas:
+		Las consignas buscan explorar diferentes aspectos del Metaverso, una tecnología que combina entornos digitales en 3D. Se abordan temas como su definición, características, ventajas y desventajas, así como su relación con videojuegos, inteligencia artificial, IoT y otras tecnologías. También se analiza la conexión entre el Metaverso y dispositivos de acceso, se identifican empresas involucradas en su desarrollo, y se examinan lenguajes de programación, principios de diseño y conciencia de la comunidad de programadores respecto al Metaverso. La última pregunta se enfoca en proyectos de Metaverso que utilizan Realidad Virtual y Realidad Aumentada, solicitando detalles sobre los lenguajes de programación, la inmersión generada y los dispositivos empleados.
+		Dichas consignas, sirvieron como preguntas orientativas o disparadores y permitieron el desarrollo de todo el trabajo. Asimismo, y como complemento, cabe destacar que se desarrollaron diferentes encuentros en los que se trabajó con la identificación de artículos con relevancia científica para la tarea, charla-taller con un especialista en la temática, adecuaciones formales al formato de artículo requerido; así como revisiones periódicas de los distintos avances para cada uno de los grupos.}
+	 \subsection{Introducción al Metaverso}
+	{\normalsize La definición del Metaverso ha evolucionado con el tiempo y ha adquirido diversos matices. Desde finales de la década de 2000 hasta mediados de la década de 2010, se comenzó a utilizar el término en entornos digitales y virtuales, como las gamificaciones y las plataformas de aprendizaje basadas en avatares. \textcite{schlemmer2009metaverse} lo define como mundos virtuales digitales en 3D que permiten a las personas vivir en ellos y construir sus identidades a través de avatares y cuerpos digitales. Las características clave de un Metaverso incluyen: \parencite{nieto2022introduccion}
+	 		\begin{itemize}
+	 		\item \textbf{Inmersión:} Ofrece un entorno inmersivo tridimensional que permite a los usuarios sentirse completamente sumergidos en el entorno digital.
+	 		\item \textbf{Interacción:} Los usuarios pueden interactuar entre sí y con objetos digitales de diversas formas, desde chats y juegos hasta actividades colaborativas.
+	 		\item \textbf{Persitencia:} El Metaverso es un espacio continuo que existe independientemente de si los usuarios están en línea o no.
+	 		\item \textbf{Economía Virtual: }Suelen tener su propia economía virtual donde se compran, venden y comercializan bienes y servicios digitales.
+	 		\item \textbf{Conectividad Global: }Permite que personas de todo el mundo interactúen sin importar su ubicación física.
+	 	\end{itemize}
+	 	Ventajas del Metaverso:
+	 	\begin{itemize}
+	 		\item La inmersión con interacción en mundos virtuales 3D conduce a posibilidades adicionales de construcción de identidad, presencia y copresencia. En entornos sociales de realidad virtual, cada usuario se materializa y es visible como un agente o avatar digital \parencite{dalgarno2010learning}.
+	 		\item La identificación con el propio avatar en un entorno virtual puede tener un profundo impacto psicológico en el comportamiento y el aprendizaje. Las experiencias encarnadas como avatares en espacios de realidad tienen una influencia directa en el comportamiento humano y su transferencia al mundo físico. Este fenómeno se llama efecto Proteus \parencite{yee2007proteus}.
+	 		\item En un futuro permitirá a personas de todo el mundo interactuar sin importar su ubicación física.
+	 		\item Facilitar la creación de economías virtuales y oportunidades comerciales.
+	 		\item  Colaboración y comunicación a través de experiencias sumamente inmersivas.
+	 		\item Nuevas formas de entretenimiento y experiencias digitales.
+	 	\end{itemize}
+	 	Desventajas del Metaverso:
+	 	\begin{itemize}
+	 		\item Tanto las tecnologías RA y RV son subyacentes. Ambas tecnologías son persuasivas y pueden influir en la cognición, las emociones y comportamientos de los usuarios \parencite{slater2020ethics}.
+	 		\item El alto costo de los equipos es una barrera para la adopción masiva que se espera mitigar en el largo plazo.
+	 		\item La distracción de la atención de los usuarios en aplicaciones de RA basadas en la ubicación ha provocado accidentes perjudiciales.
+	 		\item La sobrecarga de información es un desafío psicológico que debe prevenirse.
+	 		\item Las cuestiones morales incluyen el aumento no autorizado y la manipulación de hechos hacia puntos de vista sesgados.
+	 		\item La recopilación y el intercambio de datos con otras partes constituye el riesgo con mayores implicaciones en lo que respecta a la privacidad \parencite{christopoulos2021arlean}.
+	 		\item La capa de datos adicional puede surgir como una posible amenaza a la ciberseguridad.
+	 		\item Los actores del Metaverso pueden verse tentados a compilar la psicografía biométrica de los usuarios basándose en las emociones de los datos del usuario. Estos perfiles podrían usarse para inferencias de comportamiento no deseadas que alimentan el sesgo algorítmico \parencite{heller2020watching}.
+	 	\end{itemize}
+	   Este capítulo proporciona una base sólida para comprender el concepto del Metaverso y establece las bases para explorar sus aplicaciones y desafíos en los capítulos posteriores de la monografía.}
+	\subsection{Videojuegos, Inteligencia Artificial, IoT y su fusión en el Metaverso}
+	{\normalsize Los videojuegos anticipan algunas de las características de los actuales Metaversos y han sido pioneros en muchas de las características e introduciendo conceptos como universos multijugador y narrativas compartidas. Esta relación simbiótica permite que ambos evolucionen juntos, con los Metaversos adoptando mecánicas de juego y los videojuegos incorporando elementos de los Metaversos.\par
+		La Inteligencia Artificial (IA) y el Internet de las Cosas (IoT) también juegan un papel crucial en la evolución del Metaverso. La IA mejora la experiencia del jugador al procesar grandes cantidades de datos y generar resultados únicos, como la creación de avatares de Metaverso. El IoT, por otro lado, conecta el mundo virtual con el mundo real al interconectar dispositivos físicos y objetos cotidianos a través de Internet. Con esta tecnología, se pueden realizar simulaciones dentro del Metaverso \parencite{gonzalez2022metaverso}.\par
+		La convergencia de videojuegos, IA e IoT en el Metaverso proporciona una experiencia de usuario sin precedentes, creando un mundo digital verdaderamente envolvente y auténtico. Sin embargo, aún queda camino por recorrer para alcanzar este punto.}
+	\subsection{Tecnologías y empresas en la vanguardia}
+	{\normalsize 
+		Las empresas desempeñan un papel fundamental en la creación y expansión del Metaverso, contribuyendo con ideas innovadoras y soluciones tecnológicas. Aquí, destacamos algunas empresas líderes en esta evolución:\par
+		\begin{itemize}
+			\item \textbf{Amazon:} Desde 2018, Amazon ha estado desarrollando un espacio de compras virtual para que compradores puedan interactuar con sus productos.
+			\item \textbf{Apple:} presentó el 5 de junio de 2023 unas gafas de Realidad Mixta que fusionan el contenido digital con el mundo físico \parencite{apple-2023}.
+			\item \textbf{Meta:} Facebook(Meta) es una de las empresas con más peso en la sociedad y en el sector de la tecnología, su nuevo proyecto, Horizon Workrooms, es un espacio de trabajo en realidad virtual, concebido para que los equipos conecten, colaboren y creen juntos.
+			\item \textbf{Microsoft:} Mesh es una plataforma de Realidad Mixta que salió al mercado en marzo de 2022, donde se permite a los usuarios de todas las partes del mundo formar parte de un mundo virtual conectándose desde la plataforma. El acceso sólo será posible con gafas de Realidad Virtual como las HoloLens \parencite{martinez2022metaverso}.
+			\item \textbf{Nvidia:} Omniverse es una plataforma para la colaboración y simulación de diseño 3D, y puede conectarse con otras plataformas digitales para dar a los mundos virtuales los atributos físicos del mundo real \parencite{roberts2023ar}.
+		\end{itemize}
+			Para comprender completamente el Metaverso, es esencial conocer las tecnologías clave que lo impulsan. Las tecnologías más influyentes en este contexto son la Realidad Virtual (RV), la Realidad Aumentada (RA) y la Realidad Mixta (RM). Estas tecnologías se fusionan para crear experiencias inmersivas en el Metaverso.\par
+		La Realidad Virtual (RV) es un sistema informático que genera representaciones de la realidad en tiempo real, creando un mundo virtual que sólo existe en el ordenador. Esta simulación puede referirse a escenas virtuales de lugares u objetos que existen en la realidad, y también permite proyectar en el mundo virtual movimientos reales \parencite{fib-realidadvirtual}.\par
+		La Realidad Aumentada (RA) es una simulación generada por computadora que busca mejorar nuestra realidad, no cambiarla por completo. Esta tecnología permite la incorporación de objetos o experiencias virtuales en el mundo real, mejorando así la experiencia del usuario. Un ejemplo común de RA son los filtros de Instagram. La RA se puede considerar como una versión más realista de la Realidad Virtual (RV) \parencite{gonzalez2022metaverso}.\par
+		La Realidad Mixta (RM) es una combinación de RA y RV que permite la interacción física con objetos virtuales en el mundo real. Esta tecnología se utiliza para desarrollar entornos “aumentados” dentro del mundo real, permitiendo a los usuarios agregar o integrar información virtual. En los entornos de RM, los datos se procesan a través de varios dispositivos de entrada, como gafas inteligentes, tabletas, sensores o computadoras personales (PC). Estos datos se combinan con dispositivos de salida, como proyectores, paredes interactivas o monitores de PC para mostrar los resultados del procesamiento \parencite{ortega2022realidad}.\par}
+	\subsection{Lenguajes, Diseño y Paradigmas de programación en el Metaverso}
+	{\normalsize Detrás de la magia que permite la inmersión en mundos virtuales encontramos lenguajes como:
+		\begin{itemize}
+			\item \textbf{Unity:} Motor gráfico para crear experiencias en 3D.
+			\item \textbf{JavaScript/HTML/CSS:} Estos lenguajes son esenciales para el desarrollo de aplicaciones basadas en navegadores web en el Metaverso.
+			\item \textbf{Python:} Se utiliza en varias capacidades en el Metaverso, como por ejemplo en el análisis de datos.
+			\item \textbf{Solidity:} Es un lenguaje de programación específico para contratos inteligentes en Ethereum. Se utiliza en el Metaverso para crear contratos inteligentes que gestionan la propiedad de activos virtuales, tokens no fungibles (NFTs) y otros aspectos de la economía virtual en plataformas basadas en blockchain.
+			\item \textbf{C++:} Se utiliza en el desarrollo de motores gráficos y simulaciones de alto rendimiento para el Metaverso.
+			\item \textbf{Java:} Se utiliza para el desarrollo de aplicaciones de RV y juegos que necesitan funcionar en una amplia gama de dispositivos.
+			\item \textbf{Go (Goland)} En el Metaverso, donde la escalabilidad y el rendimiento son fundamentales, Go es una opción sólida para el desarrollo de servidores de backend, infraestructura de red y sistemas de mensajería que deben manejar grandes volúmenes de datos y usuarios concurrentes.
+		\end{itemize}
+		En el desarrollo de aplicaciones y experiencias en el Metaverso están implicados diferentes paradigmas de programación para abordar diferentes desafíos y requisitos:
+		\begin{itemize}
+			\item \textbf{Paradigma Orientado a Objetos:} se utiliza para modelar entidades y objetos virtuales de manera que puedan interactuar y colaborar dentro del mundo virtual. Ejemplos de aplicación incluyen modelado de personajes e interacción de objetos.
+			\item \textbf{Paradigma Lógico:} Se utiliza para definir reglas y relaciones lógicas entre objetos y eventos en el mundo virtual. Ejemplos de su aplicación incluyen escenarios de juegos basados en reglas e inteligencia artificial.
+			\item \textbf{Paradigma Funcional:} Se enfoca en el procesamiento de datos y funciones puras. En el Metaverso, se aplica en procesamiento de datos y para la programación reactiva: (en entornos de Metaverso donde las interacciones de los usuarios generan eventos y cambios constantes).
+		\end{itemize}
+		Los principios de diseño que son fundamentales para los lenguajes de programación en el Metaverso, garantizan la efectividad y el atractivo del desarrollo y acceso a este mundo digital. Afectan al Metaverso cuestiones como:
+		\begin{itemize}
+			\item \textbf{Portabilidad:} Esencial, ya que permite a los usuarios acceder a las experiencias virtuales desde una variedad de dispositivos, Los lenguajes de programación y las aplicaciones deben ser compatibles con múltiples plataformas para llegar a una audiencia más amplia y brindar una experiencia consistente.
+			\item \textbf{Reusabilidad:} Fundamental para acelerar el desarrollo en el Metaverso. Se evita la duplicación de esfuerzos y se fomenta la innovación continua.
+			\item \textbf{Robustez:} Crítica para garantizar una experiencia sin interrupciones. Los errores de programación, las caídas de servidores o los fallos técnicos pueden romper la inmersión del usuario y disminuir la calidad de la experiencia. Los lenguajes y entornos deben ser diseñados para anticipar y gestionar estos problemas de manera que no afecten negativamente la interacción del usuario.
+			\item \textbf{Flexibilidad:} El Metaverso es un entorno dinámico y en constante evolución. Los lenguajes y entornos deben ser flexibles para permitir actualizaciones frecuentes, integración de nuevas tecnologías y ajustes en función de las demandas de la comunidad de usuarios.
+			\item \textbf{Eficiencia y Rendimiento:} La eficiencia y el rendimiento son cruciales, donde la interacción en tiempo real y la alta calidad gráfica son estándar.
+		\end{itemize}}
+		\subsection{Comunidad de Programadores y Potencial del Metaverso}
+		{\normalsize La conciencia sobre las oportunidades laborales y el potencial de crecimiento en el Metaverso varía entre los programadores. El Metaverso ofrece:
+			\begin{itemize}
+				\item \textbf{Posibilidades laborales:} La demanda de habilidades para crear experiencias virtuales y tecnologías blockchain está creciendo, aunque la percepción de estas oportunidades puede variar según la especialización e intereses individuales de los programadores.
+				\item \textbf{Potencial de crecimiento:} El Metaverso es un sector en rápido crecimiento con un desarrollo significativo. La inversión de empresas líderes en tecnología y el aumento en la adopción de experiencias virtuales sugieren un crecimiento continuo.
+				\item Los programadores que se mantienen al día con las tendencias y tecnologías emergentes en el Metaverso están mejor posicionados para aprovechar estas oportunidades.
+			\end{itemize}
+			Elegir un lenguaje de programación para el desarrollo en el Metaverso es una decisión importante, ya que afectará la eficiencia, la escalabilidad y la capacidad de colaboración del proyecto. se deben considerar varios factores:
+			\begin{itemize}
+				\item \textbf{Compatibilidad:} El lenguaje debe ser compatible con las plataformas de Metaverso deseadas.
+				\item \textbf{Gráficos 3D:} Debe facilitar el desarrollo de entornos virtuales y gráficos 3D.
+				\item \textbf{Comunidad:} Debe tener una comunidad activa de desarrolladores.
+				\item \textbf{Rendimiento:} Debe ser capaz de manejar grandes cantidades de datos y gráficos para experiencias inmersivas.
+				\item \textbf{Multiplataforma:} Debe admitir el desarrollo para diferentes sistemas operativos y hardware.
+				\item \textbf{Escalabilidad:} Debe ser capaz de manejar proyectos en crecimiento y adaptarse a cambios en los requisitos.
+				\item \textbf{Seguridad:} Debe tener buenas prácticas de seguridad para proteger la privacidad y la integridad de los datos de los usuarios.		
+				\item \textbf{Integración con Tecnologías Emergentes:} Debe integrarse bien con tecnologías emergentes relevantes para su proyecto, como blockchain, realidad virtual, realidad aumentada, inteligencia artificial, etc.
+				\item \textbf{Costo y Licencias:} Se deben considerar los costos asociados con el uso del lenguaje, incluyendo las licencias y el costo de desarrollo.
+			\end{itemize}}
+	\subsection{Javascript en el Metaverso, proceso Inmersivo y tecnologías relacionadas a la web.}
+	{\normalsize Javascript es un lenguaje ligero, interpretado y multiparadigma. Es capaz de aportar soluciones eficaces en la mayoría de los ámbitos o dominios de aplicación, siendo su fuerte el dominio de aplicaciones web.
+		Para el desarrollo se caracteriza por cuestiones como:
+		
+		\begin{itemize}
+			\item \textbf{Simplicidad:} Estructura sencilla que lo vuelve más fácil de aprender e implementar.
+			\item \textbf{Velocidad:} Se ejecuta más rápido que otros lenguajes y favorece la detección de los errores.
+			\item \textbf{Versatilidad:} Integrable con otros lenguajes como: PHP, Perl y Java.
+			\item \textbf{Popularidad:} Existen numerosos recursos y foros disponibles con habilidades y conocimientos ilimitados.
+			\item \textbf{Carga del servidor:} La validación de datos puede realizarse a través del navegador web y las actualizaciones solo se aplican a ciertas secciones de la página web.
+			\item \textbf{Actualizaciones:} Se actualiza de forma continua con nuevos frameworks y librerías, esto le asegura relevancia dentro del sector \parencite{ceei-2022}.
+		\end{itemize}
+		Sin embargo tiene desventajas importantes como:
+		\begin{itemize}
+			\item \textbf{Compatibilidad con los navegadores:} Los diferentes navegadores web interpretan el código JavaScript de forma distinta, dependiendo incluso de la versión de este.
+			\item \textbf{Depuración:} Aunque algunos editores de HTML admiten la depuración, son menos eficaces que otros editores. Encontrar el problema puede ser un reto, ya que los navegadores no muestran ninguna advertencia sobre los errores.
+			\item \textbf{Gestión de Recursos del Lado del Servidor:} 
+			Un Metaverso demandará una considerable cantidad de recursos computacionales para administrar interacciones en tiempo real, renderización gráfica y otros procesos intensivos en CPU. La naturaleza de un solo hilo de ejecución (single-threaded) de JavaScript puede representar una desventaja significativa, ya que puede limitar la capacidad de gestionar múltiples tareas de manera simultánea. Además, en comparación con otros lenguajes, la gestión de memoria en JavaScript es menos eficiente.
+			\item \textbf{Madurez, Seguridad y Estabilidad del Ecosistema:}
+			La madurez y estabilidad de las herramientas y frameworks disponibles son esenciales para el éxito en el desarrollo de un Metaverso. Un ecosistema menos maduro puede presentar desafíos en términos de rendimiento, seguridad y estabilidad.
+			
+		\end{itemize}	
+		Para una experiencia inmersiva en Javascript hay numerosas bibliotecas, protocolos y tecnologías relacionadas a estas. Es esencial para esto comprender el funcionamiento de los gráficos 3D y cómo se representan en un entorno virtual, bibliotecas como WebGL o Three Js (derivada de esta última) proporcionan APIs de gráficos 3D para la creación de entornos gráficos.\par
+		Un concepto relacionado con el mundo de los gráficos 3D es el concepto de gemelo digital. Un gemelo digital es una representación virtual de un objeto o sistema que abarca su ciclo de vida, se actualiza a partir de datos en tiempo real y utiliza la simulación, machine learning y el razonamiento para facilitar la toma de decisiones \parencite{ibm-digitaltwin-2023}. Este no es una simulación, tiene un ciclo de vida y comportamiento realista, permite a las empresas del Metaverso testear comportamientos y poder predecirlos. Javascript se puede usar para programar los comportamientos del gemelo digital y OnTwins es una solución aplicable al Metaverso basada en la nube y permite virtualizar entornos urbanos enteros \parencite{ontwins-2023}.
+		Cuestiones de tiempo de respuesta son sumamente importantes para una experiencia correcta, WebSockets es una tecnología avanzada que hace posible abrir una sesión de comunicación interactiva entre el navegador del usuario y un servidor. Con esta API, puede enviar mensajes a un servidor y recibir respuestas controladas por eventos sin tener que consultar al servidor para una respuesta \parencite{mozilla-websockets-2023}. Esto minimiza la sobrecarga del servidor y mejora los tiempos de respuesta antes los cambios.\par
+		Finalmente para culminar la inmersión, se debe integrar todo con blockchain y NFTs en el Metaverso. La tecnología blockchain, también conocida como cadena de bloques, es un libro de contabilidad inmodificable y compartido que facilita el proceso de registro de transacciones y seguimiento de activos en una red empresarial \parencite{ibm-blockchain-2023}. Los activos pueden ser tangibles o intangibles. Los NFTs o tokens no fungibles son un tipo de criptomoneda que se deriva de los contratos inteligentes de Ethereum \parencite{wang2021non}. Al integrar un Metaverso con blockchain podemos permitir a los usuarios poseer y comerciar estos objetos virtuales de manera segura \parencite{iebs-business-school-2023}.
+		Algunas librerías o frameworks de JavaScript para el desarrollo de Metaversos:
+		\begin{itemize}
+			\item \textbf{WebXR:} API web para crear experiencias de realidad virtual y aumentada en navegadores.
+			\item \textbf{AR.js:} Biblioteca JavaScript de código abierto para crear experiencias de realidad aumentada en la web.
+			\item \textbf{Babylon.js:} Permite a los desarrolladores crear entornos 3D accesibles en ordenadores y dispositivos móviles a través de navegadores web.
+			\item \textbf{PlayCanvas:} Motor de desarrollo de juegos y experiencias en 3D que utiliza tecnologías web para crear contenido interactivo.
+		\end{itemize}
+		Estas herramientas permiten una experiencia realista en dispositivos como Oculus, Microsoft o Meta, pero también pueden utilizarse en navegadores web o smartphones/tablets para una experiencia más artificial.}
+\section{Conclusiones}
+Si bien el Metaverso se encuentra en una etapa muy temprana, existen varias tecnologías que respaldan su desarrollo. Algunas de estas tecnologías todavía se encuentran en sus primeras etapas o no son accesibles para el público en general, como lo pueden ser la realidad virtual y sus respectivos dispositivos. Han habido importantes adelantos este último tiempo en la materia.\par
+En cuanto al desarrollo de entornos inmersivos y características propias del Metaverso, como lo puede ser la economía virtual; los lenguajes de programación proveen a los desarrolladores diversas herramientas para llevar a cabo estás tareas tales como librerías, motores gráficos entre otras herramientas. Las empresas como Meta, Microsoft, Nvidia, Apple y Google son las que han impulsado en gran medida al desarrollo del Metaverso y de los avances que podemos ver hasta el día de hoy.
+El uso de gemelos digitales será importante para la puesta en marcha del Metaverso, ya que se podrán predecir comportamientos indeseados tanto en objetos como en estructuras de este.\par
+En este trabajo, hemos explorado el potencial de JavaScript como un lenguaje de programación para el desarrollo y la difusión del Metaverso, un entorno virtual que integra múltiples plataformas y experiencias. Hemos mostrado que JavaScript ofrece diversas herramientas que facilitan la creación de aplicaciones web inmersivas, interactivas y seguras, tales como:\par
+\begin{itemize}
+	\item API’s WebVR y WebAR, que permiten acceder a dispositivos de realidad virtual y aumentada desde el navegador.
+	\item WebSockets, que permiten una comunicación bidireccional entre el cliente y el servidor, mejorando los tiempos de respuesta y reduciendo la sobrecarga del servidor.
+	\item Tecnologías de blockchain y NFT, que permiten tener y comerciar objetos virtuales de una manera segura y descentralizada.
+\end{itemize}
+Hemos destacado también las ventajas de JavaScript como un lenguaje multiplataforma, multiparadigma, simple y flexible que puede ser ejecutado por cualquier persona con un navegador web. Su alta popularidad y su familiaridad entre la comunidad de programadores facilitará su adopción y uso. Hemos evaluado también sus limitaciones para el desarrollo del Metaverso, consideramos la más critica a la compatibilidad entre navegadores, ya que evita implementaciones uniformes.
+Consideramos a JavaScript como un lenguaje prácticamente indispensable para crear interfaces gráficas atractivas e inmersivas, pero que no es la mejor opción para el manejo de la lógica y los datos en los servidores del Metaverso, donde otros lenguajes pueden ofrecer mejor rendimiento, seguridad y escalabilidad.\par
+Será cuestión de tiempo para que las tecnologías de realidad virtual sean comunes como lo puede ser un smartphone. El Metaverso puede parecer aterrador pero es una gran oportunidad para acercar a la gente, crear nuevos vínculos comerciales y de transformar industrias resistentes a los avances tecnológicos de hoy en día y del futuro.
+\pagebreak
+\section{Referencias}
+\printbibliography[heading=none]
+\end{document}
